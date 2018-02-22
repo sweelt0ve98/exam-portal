@@ -32,6 +32,9 @@ a:visited {
     width: 150px;
     left: 0;
 }
+#search {
+    
+}
 #menu ul {
     list-style-type: none;
     padding: 0;
@@ -51,9 +54,11 @@ a:visited {
     background-color: #454545;
 }
 #content {
-    padding: 1em 8em;
+    padding: 1em ;
 }
 #header {
+    float: right;
+    color: #9AD5F9;
     width: auto;
     bottom: 200px;
 
