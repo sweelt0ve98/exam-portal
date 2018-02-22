@@ -90,7 +90,6 @@ a:visited {
     text-align:start;
 }
 
-
 .closed {
     display: none;
 }
@@ -98,8 +97,8 @@ a:visited {
     display: block;
 }
 .floating-icon {
-    display: block;
+    display: inline;
     float: left;
-    width: 33.3333333%;
+    width: 33%;
     
 }

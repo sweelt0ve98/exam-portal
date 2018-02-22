@@ -53,8 +53,21 @@
           </ul>
         </div>
       </div><!--row -->
-      <div class="call-to-action"><!-- Tìm hiểu hoàn thiện sau :) -->
-          Hiển thị thông tin tùy vào biểu tượng được chọn
+      <div class="row"><!-- Tìm hiểu hoàn thiện sau :) -->
+        <div>
+          <img class="floating-icon" onmouseenter="show('icon1','icon2','icon3')" src="images/1.jpg">
+          <img class="floating-icon" onmouseenter="show('icon2','icon1','icon3')" src="images/2.jpg">
+          <img class="floating-icon" onmouseenter="show('icon3','icon1','icon2')" src="images/3.jpg">
+        </div>
+        <div id="icon1" class="closed">
+          <p>1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</p>
+        </div>
+        <div id="icon2" class="closed">
+          <p>2222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222</p>
+        </div>
+        <div id="icon3" class="closed">
+          <p>33333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333</p>
+        </div>
       </div>
       <div class="row">
         <div id="box1" class="col">
@@ -67,13 +80,13 @@
         <div id="box2" class="col">
           <h3>Tạo tài khoản nhanh</h3>
           
-            <table>
+            <table id="table1">
               <tr>
                 <td><input type="text" name="hoten" placeholder="Username"></td>
-                <td rowspan="2">
-                  <form method="GET" action="html/createAccount.html">
-                    <input class="x2" type="submit" value="Tạo">
-                  </form>
+                <td id="rwspn" rowspan="2">
+                  <!--form method="GET" action="html/createAccount.html"-->
+                    <button id="createbutton" onclick="inputEmail('createbutton')">Tạo</button>
+                  <!--/form-->
                 </td>
               </tr>
               <tr>
