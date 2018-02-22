@@ -72,8 +72,12 @@ a:visited {
 }
 .row .col {
     float: left;
-    width: 31.3333%;
+    width: 48.5%;
     margin-right: 2.99%;
+}
+.row.col.x2 {
+    flex : 2;
+    
 }
 .row .col:last-child {
     float: right;
