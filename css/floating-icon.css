@@ -1,0 +1,12 @@
+.closed {
+    display: none;
+}
+.show {
+    display: block;
+}
+.floating-icon {
+    overflow: auto;
+    display: inline-block;
+    width: 30%;
+    
+}
