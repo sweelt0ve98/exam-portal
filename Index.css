@@ -32,6 +32,9 @@ a:visited {
     width: 150px;
     left: 0;
 }
+#search {
+    
+}
 #menu ul {
     list-style-type: none;
     padding: 0;
@@ -51,9 +54,11 @@ a:visited {
     background-color: #454545;
 }
 #content {
-    padding: 1em 8em;
+    padding: 1em ;
 }
 #header {
+    float: right;
+    color: #9AD5F9;
     width: auto;
     bottom: 200px;
 
@@ -67,8 +72,12 @@ a:visited {
 }
 .row .col {
     float: left;
-    width: 31.3333%;
+    width: 48.5%;
     margin-right: 2.99%;
+}
+#createbutton {
+    flex : 2;
+    
 }
 .row .col:last-child {
     float: right;
@@ -81,3 +90,15 @@ a:visited {
     text-align:start;
 }
 
+.closed {
+    display: none;
+}
+.show {
+    display: block;
+}
+.floating-icon {
+    display: inline;
+    float: left;
+    width: 33%;
+    
+}
