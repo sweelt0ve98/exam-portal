@@ -39,14 +39,10 @@
                     <a class="nav-link" href="AboutUs.html"> About us</a>
                 </li>
             </ul>
-            <form class="pure-form">
-                <fieldset>
-                    <input type="text" style="color: #333333" name="username" placeholder="Username">
-                    <input type="password" style="color: #333333" name="pass" placeholder="Password">
-                    <button type="submit" class="pure-button pure-button-primary">Sign in</button>
-                    <a href="#"> <button type="button" class="pure-button pure-button-primary">Sign up</button> </a>
-                </fieldset>
-            </form>
+            <!-- 2 nut Sign in - Sign up -->
+            <a class="btn navbar-btn ml-2 text-white btn-primary" href="signIn.html"><i class="fa d-inline fa-lg fa-user-circle-o"></i> Sign in</a>
+            <a class="btn navbar-btn ml-2 text-white btn-primary" href="signUp.html"><i class="fa d-inline fa-lg fa-user-circle-o"></i> Sign up</a>
+            <!--End-->
         </div>
     </div>
 </nav>
@@ -68,8 +64,12 @@
                     <div class="form-group"> <label>Password</label>
                         <input type="password" name="password" class="form-control" placeholder="Password"> </div>
                     <div class="form-group"> <label>Retype password</label>
-                        <input type="password" name="password" class="form-control" placeholder="Password"> </div>
+                        <input type="password" name="password" class="form-control" placeholder="Retype Password"> </div>
                     <button type="submit" class="btn btn-primary">Sign up</button>
+                    <p class="change_link">
+                        Already a member?
+                        <a href="signIn.html" class="to_register">Sign In.</a>
+                    </p> 
                 </form>
 
 
