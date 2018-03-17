@@ -131,11 +131,12 @@ var page = path.split("/").pop();
 
 window.onload = function () {
     //console.log("here");
+    var numOfCourse = subject.length, i, j, k, courseList, listSchool, listtime, listdiscription, provi, link, fb, scrpt;
     switch (page) {
     
     case "courses.html":
     //bat dau render list of subject
-        var numOfCourse = subject.length, i, j, k, courseList, listSchool, listtime, listdiscription, provi, link, fb, scrpt;
+        
         
         courseList = " ";
         for (i = 1; i <= numOfCourse; i += 1) {
@@ -170,6 +171,7 @@ window.onload = function () {
         document.getElementById("ava").innerHTML = '<img src="../../../images/courselist/' + i + '/ava.jpg" alt="" class="img-rounded img-responsive" width="145">';
         
            // console.log(provi);
+        
         document.getElementById("provider").innerHTML = 'Phát hành bởi: ' + sjProvider[i - 1][0] + '<br>' + sjProvider[i - 1][2];
         fb = document.getElementById("fb");
         fb.href = sjProvider[i - 1][4];
@@ -220,7 +222,7 @@ window.onload = function () {
         //lay thanh cong file số.js
         // script số 2 để render kiểu câu hỏi
         scrpt[2].type = "text/javascript";
-        scrpt[2].src = "../../../js/typetestjs/" + i + ".js";
+        scrpt[2].src = "../../../js/typetestjs/type" + i + ".js";
         break;
     }
 };
