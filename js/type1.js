@@ -1,11 +1,15 @@
 //alert("Hi");
 
 window.onload=function(){
+	renderMon("Kiến trúc máy tính","Bài thi môn học: Kỳ 1 - 2018");
+	renderList(7);
+	renderQuest(7);
+	getQuest(7);
     var min = 90;
     var sec = 50;
     setInterval(function(){
 	   	if (min != 0 || sec !=0){
-	   		console.log("here");
+	   		//console.log("here");
 	        document.getElementById("timer").innerHTML = "Thời gian làm bài còn "+ min +":" + sec ;
 	        sec-=1;
 	        if(min>0){
@@ -74,13 +78,14 @@ function uncheckedAll(){
 }
 */
 function getQuest(a){
-	 return "Câu "+a+": Trái đất có hình gì:<br>"+
-	 		//"<input type=\"radio\" name=\"choice"+a+"\" style=\"display:none\" value=\"N/A\"><br>"+
-			"<input type=\"radio\" name=\"choice"+a+"\"  value=\"A\">Tròn<br>"+
+	console.log("here");
+	var s= " ";
+	s =	"<input type=\"radio\" name=\"choice"+a+"\"  value=\"A\">Tròn<br>"+
 			"<input type=\"radio\" name=\"choice"+a+"\"  value=\"B\">Vuông<br>"+
 			"<input type=\"radio\" name=\"choice"+a+"\"  value=\"C\">Méo<br>"+
 			"<input type=\"radio\" name=\"choice"+a+"\"  value=\"D\">Dài<br>"
 			;
+		return s;
 }
 /*
 function getFooter(){
@@ -107,3 +112,33 @@ function genFooter(){
 	return seq;
 }
 */
+function renderList(a){
+	var i = 1;
+	var s = " ";
+	for(;i<=a;i++){		
+		if(i==1) s+="<li class=\"nav-item\"><a href=\"\" class=\"active nav-link\" data-toggle=\"pill\" data-target=\"#"+i+"\">Câu "+i+"</a></li>";
+		else s+="<li class=\"nav-item\"><a class=\"nav-link\" href=\"\" data-toggle=\"pill\" data-target=\"#"+i+"\">Câu "+i+"</a></li>";
+	}
+	document.getElementById("list").innerHTML = s;
+}
+
+function renderQuest(a){
+	var i = 1;
+	var s = " ";
+	
+	for(;i<=a;i++){		
+		if(i==1){
+			s+="<div class=\"tab-pane fade show active\" id=\""+i+"\" role=\"tabpanel\"><p>"+i+": Trái đất hình gì:<div>"+getQuest(i)+"</div></div>";
+		}
+		else{
+			s+="<div class=\"tab-pane fade\" id=\""+i+"\" role=\"tabpanel\"><p>"+i+": Trái đất hình gì:<div>"+getQuest(i)+"</div></div>";
+		}
+
+	}
+	document.getElementById("quests").innerHTML = s;
+}
+
+function renderMon(s,r){
+	document.getElementsByTagName('h1')[0].innerHTML = s ;
+	document.getElementsByTagName('p')[0].innerHTML = r;
+}
