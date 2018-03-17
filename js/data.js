@@ -17,6 +17,15 @@ var sjDiscription = [
     "Triết học là cơ sở của vạn vật"
 ];
 
+//1 là trắc nghiệm 1 trong 4
+//2 là trắc nghiệm n trong 4
+//3 là điền
+var testType = [
+    1,
+    1,
+    1
+];
+
 var sjTimeDiscription = [
     [
         //mon 1
@@ -86,24 +95,28 @@ var sjProvider = [
     //link don vi
     //email lien lac
     //shortname
+    //fb
     [
         "Khoa Công nghệ thông tin - UET-VNU",
         "http://fit.uet.vnu.edu.vn",
         "clotech@vnu.edu.vn",
-        "Khoa CNTT"
+        "Khoa CNTT",
+        "https://www.facebook.com/UET.FIT/"
     ],
     [
         "Khoa Điện từ viễn thông - UET-VNU",
         "http://fet.uet.vnu.edu.vn/",
         "dtvt.vp@vnu.edu.vn",
-        "Khoa ĐTVT"
+        "Khoa ĐTVT",
+        "https://www.facebook.com/fet.uet/"
         
     ],
     [
         "Khoa Triết học - ĐHSPHN",
         "http://triethoc.hnue.edu.vn/",
         "k.triethoc@hnue.edu.vn",
-        "Khoa Triết"
+        "Khoa Triết",
+        "https://www.facebook.com/TruongDaiHocSuPhamHaNoi/"
     ]
 ];
 // ghi du ca 4 array o tren
@@ -119,10 +132,12 @@ var page = path.split("/").pop();
 window.onload = function () {
     //console.log("here");
     switch (page) {
+    
     case "courses.html":
     //bat dau render list of subject
-        var numOfCourse = subject.length, i, j, k, courseList = " ", listSchool, listtime, listdiscription, provi, link;
-
+        var numOfCourse = subject.length, i, j, k, courseList, listSchool, listtime, listdiscription, provi, link, fb, scrpt;
+        
+        courseList = " ";
         for (i = 1; i <= numOfCourse; i += 1) {
             courseList += "<div class=\"col-lg-4 mb-4\">" +
                 "<div class=\"card h-100\">" +
@@ -156,6 +171,8 @@ window.onload = function () {
         
            // console.log(provi);
         document.getElementById("provider").innerHTML = 'Phát hành bởi: ' + sjProvider[i - 1][0] + '<br>' + sjProvider[i - 1][2];
+        fb = document.getElementById("fb");
+        fb.href = sjProvider[i - 1][4];
         link = document.getElementById("link");
         link.href = sjProvider[i - 1][1];
         link.innerHTML = sjProvider[i - 1][3];
@@ -193,7 +210,17 @@ window.onload = function () {
         document.getElementById("listDiscription").innerHTML = listdiscription;
         break;
     case "examPage.html":
-        
+        i = path.split("/")[6];
+        //console.log(i);   i = đúng thư mục
+        //lấy link js chứa data
+        // cái đầu tiên [0] là js này, ko đc đổi
+        scrpt = document.getElementsByTagName("script");
+        scrpt[1].type = "text/javascript";
+        scrpt[1].src = "../../../js/datajs/" + i + ".js";
+        //lay thanh cong file số.js
+        // script số 2 để render kiểu câu hỏi
+        scrpt[2].type = "text/javascript";
+        scrpt[2].src = "../../../js/typetestjs/" + i + ".js";
         break;
     }
 };
