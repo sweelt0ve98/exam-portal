@@ -61,9 +61,9 @@ window.onload = function(){
         case "courses.html":
         //bat dau render list of subject
             var numOfCourse = subject.length;
-            var index = 1;
+            var i = 1;
             var courseList = " ";
-            console.log("here");
+            
             for(;i<=numOfCourse;i++){
                 courseList += 
                 "<div class=\"col-lg-4 mb-4\">"+
@@ -79,7 +79,7 @@ window.onload = function(){
             "</div>"
             ;
             }
-            document.getElementById("list-of-subject").innerHTML = s;
+            document.getElementById("list-of-subject").innerHTML = courseList;
             break;
         case "coursePage.html":
 
