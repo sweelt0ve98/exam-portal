@@ -131,7 +131,7 @@ var page = path.split("/").pop();
 
 window.onload = function () {
     //console.log("here");
-    var numOfCourse = subject.length, i, j, k, courseList, listSchool, listtime, listdiscription, provi, link, fb, scrpt;
+    var numOfCourse = subject.length, i, j, k, courseList, listSchool, listtime, listdiscription, provi, link, fb, scrpt, cutQuery;
     switch (page) {
     
     case "courses.html":
@@ -155,7 +155,12 @@ window.onload = function () {
         document.getElementById("list-of-subject").innerHTML = courseList;
         break;
     case "coursePage.html":
-        i = path.split("/")[6];
+        j = path.split("courselist/")[1];
+        cutQuery = "/" + page;
+        //console.log(cutQuery);
+        //console.log(j);
+        i = j.split(cutQuery)[0];
+        //j = path.split
         //console.log(i);
         document.getElementsByTagName("title")[0].innerHTML = sjCode[i - 1];
         document.getElementById("subject").innerHTML = subject[i - 1];
