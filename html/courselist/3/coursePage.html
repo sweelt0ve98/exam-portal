@@ -10,11 +10,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Courses: ...</title>
-    <link REL="SHORTCUT ICON" HREF="pic/icon.png">
+    <title></title>
+    <link REL="SHORTCUT ICON" HREF="../../../images/icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="https://v40.pingendo.com/assets/4.0.0/default/theme.css" type="text/css">
-
+    <script type="text/javascript" src="../../../js/data.js"></script>
 </head>
 
 <body>
@@ -22,20 +22,14 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-md bg-secondary navbar-dark">
     <div class="container">
-        <a class="navbar-brand" href="index.html">Portal-exam</a>
+        <a class="navbar-brand" href="../../../index.html">Portal-exam</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="allCourses.html">All Courses</a>
+                    <a class="nav-link" href="../../courses.html">All Courses</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="yourCourses.html"> Your Courses</a>
-                </li>
-                
-
             </ul>
-            
         </div>
     </div>
 </nav>
@@ -44,7 +38,7 @@
 <!-- Page Content -->
 <div class="container">
 
-    <h1 class="my-4">Kiến trúc máy tính</h1>
+    <h1 class="my-4" id = "subject"></h1>
 
     <!-- User info -->
     <div class="container">
@@ -52,24 +46,13 @@
             <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="well well-sm">
                     <div class="row">
-                        <div class="col-sm-6 col-md-4">
-                            <img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" width="145">
-                        </div>
+                        <div class="col-sm-6 col-md-4" id="ava"></div>
                         <div class="col-sm-6 col-md-8">
-                            <h4>Mã học phần: INT2204</h4>
+                            <h4 id="sjC"></h4>
                             <i>Khả dụng với:</i>
-                            <ul id="schoolId">
-                                <li>Đại học Công nghệ</li>
-                                <li>Đại học Giao thông Vận tải</li>
-                                <li>Đại học Khoa học Tự nhiên</li>
-                            </ul>
+                            <ul id="schoolId"></ul>
                             
-                            <p>Phát hành bởi: Khoa Công nghệ thông tin - UET-VNU<br>
-                                
-                            
-                                <a href="http://uet.vnu.edu.vn">clotech@vnu.edu.vn</a>
-                                
-                            </p>
+                            <p id="provider"></p>
                             <!-- Split button -->
                             <div class="btn-group">
                                 <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> Liên hệ </button>
@@ -78,7 +61,7 @@
                                   <div class="dropdown-divider"></div>
                                   <a class="dropdown-item" href="https://github.com/Gou-Opa/exam-portal">Github</a>
                                   <div class="dropdown-divider"></div>
-                                  <a class="dropdown-item" href="http://fit.uet.vnu.edu.vn">Khoa CNTT</a>
+                                  <a class="dropdown-item" id="link" href=""></a>
                                     
                                 </div>
                             </div>
@@ -94,46 +77,10 @@
           <div class="container">
             <div class="row">
               <div class="col-4">
-                <ul class="nav nav-pills flex-column bg-info">
-                  <li class="nav-item">
-                    <a href="" class="active nav-link" data-toggle="pill" data-target="#tabone">Kỳ 1 - 2017</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="" data-toggle="pill" data-target="#tabtwo">Kỳ 2 - 2017</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="" class="nav-link" data-toggle="pill" data-target="#tabthree">Kỳ 1 - 2018</a>
-                  </li>
-                </ul>
+                <ul class="nav nav-pills flex-column bg-info" id="listTime"></ul>
               </div>
               <div class="col-8 bg-light">
-                <div class="tab-content">
-                  <div class="tab-pane fade show active" id="tabone" role="tabpanel" >
-                    <p class="">Nội dung của bài kiểm tra đầu tiên bao gồm thế này thế này thế này...
-                        <br>
-                        Link tài liệu ở chỗ này...
-                    </p>
-                    <div style="text-align: right;">
-                        <a class="btn btn-primary" href="examPage.html" target="_blank">Vào thi </a>
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="tabtwo" role="tabpanel">
-                    <p class="">Nội dung của bài kiểm tra thứ hai bao gồm thế này thế này thế này...<br>
-                        Link tài liệu ở chỗ này...
-                    </p>
-                    <div style="text-align: right;">
-                        <a class="btn btn-primary" href="examPage.html" target="_blank">Vào thi </a>
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="tabthree" role="tabpanel">
-                    <p class="">Nội dung của bài kiểm tra thứ ba bao gồm thế này thế này thế này...<br>
-                        Link tài liệu ở chỗ này...
-                    </p>
-                    <div style="text-align: right;">
-                        <a class="btn btn-primary" href="examPage.html" target="_blank">Vào thi </a>
-                    </div>
-                  </div>
-                </div>
+                <div class="tab-content" id="listDiscription"></div>
               </div>
             </div>
           </div>
