@@ -3,11 +3,12 @@ const fs = require('fs');
 const path = require('path');
 const hostname = 'localhost';
 const port = 3000;
+const express = require('express');
+const app = express();
 
-//setup server
-const server = http.createServer((req,res) => {
-    console.log("Request for " + req.url + ' by method ' + req.method + '\n');
-
+app.use((req,res,next) => {
+    console.log(req.headers);
+    console.log(`Request for ${req.url} by method ${req.method}\n`);
     if (req.method == 'GET') {   
         var fileUrl;
         if(req.url == '/') fileUrl = './public/index.html';
@@ -70,8 +71,10 @@ const server = http.createServer((req,res) => {
     
 });
 
-
+//setup server
+const server = http.createServer(app);
 
 server.listen(port , hostname, () => {
     console.log(`Server running at http://${hostname}:${port}`); 
 });
+
