@@ -1,12 +1,15 @@
 #include <iostream>
 #include <queue>
 
-void bfs(int **a,int n){
+using namespace std;
+
+void bfs(int **a,int n,int *v){
     queue<int> tmp;
-    int i,j;
+    int i,j,now;
     tmp.push(1);
     for(i=1; i<=n; i++){
-        now = tmp.top();
+        now = tmp.front();
+        tmp.pop();
         cout << now ;
         v[now -1 ]=1;
         for(j =1; j<=n ; j++){
@@ -15,6 +18,7 @@ void bfs(int **a,int n){
             }
         }
     }
+}
     
 int main(){
     int a,b, x,y;
@@ -31,7 +35,12 @@ int main(){
     }
     for(int i = 0; i< b; i++){
         cin >> x >> y;
-        x > y ? x=x : {int tmp; tmp = y ; y =x ; x= tmp;};
+        if(x>y){
+            int tmp; 
+            tmp = y ; 
+            y =x ; 
+            x= tmp;
+        }
         a[x][y]=0;
     }
     for(int i = 0; i< a ; i++){
