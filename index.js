@@ -23,9 +23,6 @@ const server = http.createServer((req,res) => {
         if(fileExt == '.html'){
             fs.exists(filePath, (exists) => {
                 if(!exists){
-                    res.on('error', (err) => {
-                        console.error(err);
-                    });
                     res.statusCode = 404;
                     fileUrl = './public/html/404.html';
                     filePath = path.resolve(fileUrl);
