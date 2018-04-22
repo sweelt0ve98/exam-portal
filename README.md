@@ -7,4 +7,5 @@ Hướng dẫn sử dụng:
 - Chọn bài test trong số các bài test hiện có và thực hiện theo yêu cầu
 - Hệ thống điểm sẽ tự động hiện lên sau khi bấm Nộp bài
 -----------------------------------------------------------------------------------------------------------------------------------------
- Hi vọng khi kết thúc môn học nhóm sẽ tạo ra 1 sản phẩm hoàn thiện đúng với yêu cầu của thầy và có khả năng ứng dụng vào thực tế cao.
+Hi vọng khi kết thúc môn học nhóm sẽ tạo ra 1 sản phẩm hoàn thiện đúng với yêu cầu của thầy và có khả năng ứng dụng vào thực tế cao.
+Link tài liệu phần mềm: https://docs.google.com/document/d/1gzIA70kJmkeGXPUl2R6LT9WCvsccNSTKgpjnGH-bvCQ
